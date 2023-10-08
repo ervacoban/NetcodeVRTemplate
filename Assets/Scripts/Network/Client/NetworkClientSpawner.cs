@@ -15,7 +15,7 @@ namespace NetcodeVRTemplate.Network.Client
         [ServerRpc(RequireOwnership = false)]
         private void SpawnPlayerServerRpc(ulong clientId)
         {
-            Instantiate(networkClient).SpawnWithOwnership(clientId);
+            Instantiate(networkClient).SpawnAsPlayerObject(clientId);
         }
 
         public override void OnDestroy()
